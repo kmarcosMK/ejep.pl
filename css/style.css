@@ -1,0 +1,29 @@
+/* Basic responsive styles */
+:root{
+  --bg:#f5f5f5;
+  --text:#1A1F36;
+  --accent:#1ABC9C;
+  --dark:#1A1F36;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.container{max-width:980px;margin:0 auto;padding:20px}
+.site-header{background:var(--dark);color:#fff;padding:16px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{height:40px;width:40px}
+.brand h1{margin:0;font-size:22px}
+.main-nav{margin-top:8px}
+.main-nav a{color:var(--accent);text-decoration:none;margin-right:12px;font-weight:600}
+#hero{padding:30px 0}
+.lead{color:#333;margin-top:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:8px}
+.card{background:#fff;padding:14px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.card h4{margin:0 0 6px 0}
+.card time{font-size:13px;color:#666}
+.site-footer{background:var(--dark);color:#fff;padding:20px;margin-top:30px;text-align:center}
+.site-footer a{color:var(--accent);text-decoration:none}
+article p{margin:8px 0 0 0}
+@media(max-width:600px){
+  .main-nav{display:flex;flex-wrap:wrap;gap:8px}
+  .brand h1{font-size:18px}
+}
