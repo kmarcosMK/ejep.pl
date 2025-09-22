@@ -1,19 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>EJEP – Blog i Projekty</title>
+  <title>EJEP — E-job & E-project | Inspiracje i szybkie projekty</title>
+  <meta name="description" content="EJEP — praktyczne pomysły, narzędzia i krótkie poradniki dla freelancerów i twórców projektów online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="site-header">
-  <div class="container">
-    <div class="brand">
+  <div class="container header-row">
+    <a class="brand" href="index.html">
       <img src="img/logo.svg" alt="EJEP logo" class="logo">
-      <h1>EJEP</h1>
-    </div>
-    <nav class="main-nav">
+      <div class="brand-text">
+        <span class="site-name">EJEP</span>
+        <span class="site-tag">E‑job & E‑project</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Otwórz menu">☰</button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Główne menu">
       <a href="index.html">Strona główna</a>
       <a href="#inspiracje">Wiedza</a>
       <a href="#projekty">Projekty</a>
@@ -24,57 +34,136 @@
   </div>
 </header>
 
-<main class="container">
-  <section id="hero">
-    <h2>Inspiracje i porady dla osób robiących projekty online</h2>
-    <p class="lead">EJEP – E‑job & E‑project. Przykładowe pomysły, narzędzia i proste poradniki. Start minimalny — dodajesz artykuły ręcznie lub potem podłączymy CMS.</p>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Pomysły i narzędzia do szybkich projektów online</h1>
+        <p class="lead">EJEP to praktyczne instrukcje, przykładowe projekty i zestawienia narzędzi — start minimalny, rozwój stopniowy.</p>
+        <p class="cta-row">
+          <a class="btn btn-primary" href="#inspiracje">Zobacz inspiracje</a>
+          <a class="btn btn-ghost" href="#projekty">Projekty dla startu</a>
+        </p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg width="100%" height="100%" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#1ABC9C"/>
+              <stop offset="1" stop-color="#2BC6E2"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="600" height="400" rx="16" fill="#0f1724" />
+          <g transform="translate(40,40)">
+            <rect width="220" height="120" rx="8" fill="url(#g)" opacity="0.95"></rect>
+            <rect x="260" y="0" width="240" height="60" rx="6" fill="#0b1220" opacity="0.6"></rect>
+            <circle cx="120" cy="220" r="60" fill="#12202b" opacity="0.6"></circle>
+            <rect x="240" y="160" width="200" height="120" rx="12" fill="url(#g)" opacity="0.85"></rect>
+          </g>
+        </svg>
+      </div>
+    </div>
   </section>
 
-  <section id="inspiracje" class="cards">
-    <h3>Wiedza — najnowsze wpisy</h3>
-    <article class="card">
-      <h4><a href="artykuly/article1.html">10 przykładowych stron z ogłoszeniami dla freelancerów w 2025</a></h4>
-      <time datetime="2025-09-16">16.09.2025</time>
-      <p>Krótki przegląd serwisów, miejsca gdzie można znaleźć zlecenia — opis neutralny, przykładowy.</p>
-    </article>
+  <section id="inspiracje" class="container section">
+    <header class="section-header">
+      <h2>Wiedza — najnowsze wpisy</h2>
+      <p class="muted">Treści praktyczne. Neutralne, przykładowe zestawienia i instrukcje.</p>
+    </header>
 
-    <article class="card">
-      <h4><a href="artykuly/article2.html">5 przykładowych projektów online, które możesz zrobić po godzinach</a></h4>
-      <time datetime="2025-09-16">16.09.2025</time>
-      <p>Proste projekty do wykonania po pracy, krok po kroku — pomysły, które realnie można zrealizować.</p>
-    </article>
+    <div class="cards">
+      <article class="card">
+        <a href="artykuly/article1.html" class="card-link">
+          <div class="card-media" aria-hidden="true"></div>
+          <div class="card-body">
+            <h3>10 przykładowych stron z ogłoszeniami dla freelancerów w 2025</h3>
+            <time datetime="2025-09-16">16.09.2025</time>
+            <p>Przegląd wybranych serwisów i ich zastosowań — opis neutralny i praktyczny.</p>
+          </div>
+        </a>
+      </article>
 
-    <article class="card">
-      <h4><a href="artykuly/article3.html">Przykładowe darmowe narzędzia do pracy zdalnej i projektów w 2025</a></h4>
-      <time datetime="2025-09-16">16.09.2025</time>
-      <p>Lista darmowych usług i narzędzi przydatnych w pracy zdalnej i przy małych projektach.</p>
-    </article>
+      <article class="card">
+        <a href="artykuly/article2.html" class="card-link">
+          <div class="card-media" aria-hidden="true"></div>
+          <div class="card-body">
+            <h3>5 przykładowych projektów online, które możesz zrobić po godzinach</h3>
+            <time datetime="2025-09-16">16.09.2025</time>
+            <p>Pomysły, które da się rozpocząć i skończyć w krótkim czasie, krok po kroku.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="artykuly/article3.html" class="card-link">
+          <div class="card-media" aria-hidden="true"></div>
+          <div class="card-body">
+            <h3>Przykładowe darmowe narzędzia do pracy zdalnej i projektów w 2025</h3>
+            <time datetime="2025-09-16">16.09.2025</time>
+            <p>Lista przydatnych narzędzi z krótkimi wskazówkami użycia.</p>
+          </div>
+        </a>
+      </article>
+    </div>
   </section>
 
-  <section id="projekty">
-    <h3>Mini projekty</h3>
-    <p>Krótki katalog pomysłów: landing page, prosty sklep, e‑book, portfolio. Każdy wpis można rozbudować do osobnego artykułu.</p>
+  <section id="projekty" class="container section">
+    <h2>Mini projekty — startuj mało, dowoź rezultaty</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h4>Strona wizytówka na GitHub Pages</h4>
+        <p class="muted">Szybki landing z portfolio, koszt 0 zł.</p>
+      </div>
+      <div class="project">
+        <h4>Mały e‑book / PDF</h4>
+        <p class="muted">Treść w formie ebooka — prosty produkt cyfrowy.</p>
+      </div>
+      <div class="project">
+        <h4>Prosty sklep z plikami cyfrowymi</h4>
+        <p class="muted">Zewnętrzne płatności, prosty katalog.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="narzedzia">
-    <h3>Narzędzia</h3>
-    <p>Zestawienie narzędzi: Trello, Notion, GitHub Pages, Canva — krótkie opisy i linki.</p>
+  <section id="narzedzia" class="container section">
+    <h2>Narzędzia — co warto znać</h2>
+    <ul class="tool-list">
+      <li><strong>Trello</strong> — Kanban do zadań</li>
+      <li><strong>Notion</strong> — dokumentacja i wiki</li>
+      <li><strong>GitHub Pages</strong> — darmowy hosting statycznych stron</li>
+      <li><strong>Canva</strong> — szybkie grafiki i mockupy</li>
+    </ul>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="container">
-    <p>© 2025 EJEP. Wszystkie prawa zastrzeżone.</p>
-    <p>
-      Moje domeny:
-      <a href="https://irobo.pl">irobo.pl</a> |
-      <a href="https://taskai.pl">taskai.pl</a> |
-      <a href="https://taskbot.pl">taskbot.pl</a> |
-      <a href="https://etotu.pl">etotu.pl</a>
-    </p>
-    <p><a href="privacy.html">Polityka prywatności</a> | <a href="regulamin.html">Regulamin</a></p>
+  <div class="container footer-grid">
+    <div>
+      <strong>EJEP</strong>
+      <p class="muted">Inspiracje i porady dla freelancerów i twórców projektów online.</p>
+    </div>
+
+    <div>
+      <strong>Linki</strong>
+      <p class="links">
+        <a href="https://irobo.pl">irobo.pl</a><br>
+        <a href="https://taskai.pl">taskai.pl</a><br>
+        <a href="https://taskbot.pl">taskbot.pl</a><br>
+        <a href="https://etotu.pl">etotu.pl</a>
+      </p>
+    </div>
+
+    <div>
+      <strong>Legal</strong>
+      <p><a href="privacy.html">Polityka prywatności</a><br><a href="regulamin.html">Regulamin</a></p>
+    </div>
+  </div>
+
+  <div class="container copyright">
+    <p>© 2025 EJEP — E‑job & E‑project. Wszystkie prawa zastrzeżone.</p>
   </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
